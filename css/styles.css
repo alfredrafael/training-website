@@ -11218,13 +11218,14 @@ html {
     display: block;
   }
 }
+
 .popover-container {
   position: relative;
   display: inline-block;
 }
 
 .popover-button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -11238,21 +11239,25 @@ html {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
   z-index: 1;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 4px;
+  border: 1px solid #ccc; /* Added border here */
 }
 
 .popover-content::before {
   content: "";
   position: absolute;
-  top: -10px;
+  top: -10px; /* Adjust this if necessary */
   left: 50%;
-  transform: translateX(-50%);
-  border-width: 0 10px 10px 10px;
-  border-style: solid;
-  border-color: transparent transparent #f9f9f9 transparent;
+  transform: translateX(-50%) rotate(45deg); /* Rotated the triangle for aesthetic alignment */
+  width: 18px; /* Control the size of the triangle */
+  height: 18px; /* Control the size of the triangle */
+  background-color: #f9f9f9;
+  border-left: 0.5px solid #ccc;
+  border-top: 0.5px solid #ccc;
+  box-shadow: -1px -1px 1px 0px rgba(0, 0, 0, 0.2); /* Optional: add small shadow for 3D effect */
 }

@@ -21,9 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Setup event listeners for each popover container
   popoverContainers.forEach((container, index) => {
-    // Find clickable trigger within the container
     var trigger = container.querySelector(".popover-trigger");
-
     trigger.addEventListener("click", function (event) {
       hideAllPopovers(); // Hide all first, in case one is already open
       popoverContents[index].style.display = "block";
@@ -61,6 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", function () {
     hideAllPopovers();
   });
+
+  // Automatically display the first popover on load
+  if (popoverContents.length > 0) {
+    popoverContents[0].style.display = "block"; // Display the first popover
+  }
 });
 
 // prev

@@ -11183,6 +11183,7 @@ html {
 }
 
 /* Custom CSS */
+
 .hero-banner {
   background-image: url("http://www.alfredorafael.com/wp-content/uploads/2024/05/BannerExample.png");
   background-size: cover;
@@ -11216,4 +11217,42 @@ html {
   .mobile {
     display: block;
   }
+}
+.popover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.popover-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.popover-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 4px;
+}
+
+.popover-content::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #f9f9f9 transparent;
 }

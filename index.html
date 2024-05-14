@@ -194,7 +194,27 @@
           </div>
         </div>
       </header>
+
+      <div class="popover-container">
+        <div class="popover-trigger">Click 1!</div>
+        <div class="popover-content">
+          This is pop-over content 1. It appears when you click the trigger!
+          <button class="next">Next</button
+          ><button class="previous" style="display: none">Previous</button>
+        </div>
+      </div>
+
+      <div class="popover-container">
+        <button class="popover-trigger">Button 2</button>
+        <div class="popover-content">
+          This is pop-over content 1. It appears when you click the trigger!
+          <button class="next">Next</button
+          ><button class="previous">Previous</button>
+        </div>
+      </div>
+
       <!-- Features section-->
+
       <section class="py-5" id="features">
         <div class="container px-5 my-5">
           <div class="row gx-5">
@@ -533,5 +553,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var popoverButton = document.querySelector(".popover-button");
+        var popoverContent = document.querySelector(".popover-content");
+
+        popoverButton.addEventListener("click", function () {
+          // Toggle the display CSS property
+          if (popoverContent.style.display === "block") {
+            popoverContent.style.display = "none";
+          } else {
+            popoverContent.style.display = "block";
+          }
+        });
+      });
+    </script> -->
   </body>
 </html>

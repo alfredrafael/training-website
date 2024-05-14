@@ -160,7 +160,7 @@
                     href="#"
                     data-bs-toggle="popover"
                     data-bs-title="CTA"
-                    data-bs-content="This is called a CTA, which stands for 'Call to Action'. This button should lead your user to the next step into becoming your client."
+                    data-bs-content="<strong>This is called a CTA</strong>, which stands for 'Call to Action'. This button should lead your user to the next step into becoming your client."
                     data-bs-placement="top"
                     >Get Started</a
                   >
@@ -529,6 +529,38 @@
         </div>
       </section>
     </main>
+    <button
+      type="button"
+      class="btn btn-lg btn-danger popover-trigger"
+      data-bs-content="<strong>Important</strong> content here <button class='btn btn-primary btn-sm inside-popover'>Click me</button>"
+    >
+      Popover 1
+    </button>
+    <button
+      type="button"
+      class="btn btn-lg btn-success popover-trigger"
+      data-bs-content="<strong>Notice:</strong> More content here <button class='btn btn-secondary btn-sm inside-popover'>Another Button</button>"
+    >
+      Popover 2
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var popoverTriggers = document.querySelectorAll(".popover-trigger");
+        popoverTriggers.forEach(function (trigger) {
+          var popover = new bootstrap.Popover(trigger, {
+            html: true,
+          });
+        });
+
+        document.body.addEventListener("click", function (e) {
+          if (e.target.classList.contains("inside-popover")) {
+            alert("Button inside popover clicked!");
+          }
+        });
+      });
+    </script>
     <!-- Footer-->
     <footer class="bg-dark py-4 mt-auto">
       <div class="container px-5">
@@ -554,21 +586,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
-
-    <!-- <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var popoverButton = document.querySelector(".popover-button");
-        var popoverContent = document.querySelector(".popover-content");
-
-        popoverButton.addEventListener("click", function () {
-          // Toggle the display CSS property
-          if (popoverContent.style.display === "block") {
-            popoverContent.style.display = "none";
-          } else {
-            popoverContent.style.display = "block";
-          }
-        });
-      });
-    </script> -->
   </body>
 </html>

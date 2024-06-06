@@ -16,6 +16,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <!-- Font Awesome Icons-->
+    <script src="https://kit.fontawesome.com/962f755f7d.js" crossorigin="anonymous"></script>
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <!-- Core theme JS-->
@@ -23,32 +25,29 @@
   <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
       <!-- Navigation-->
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="border-bottom: 2px solid rgb(59, 56, 56);">
         <div class="container px-5">
-          <span
-            class="navbar-brand"
-            href="index.html"
-            type="logo"
-            data-bs-toggle="popover"
-            data-bs-title="This is the logo"
-            data-bs-content="Together we'll build and/or refine your logo + develop a color-palette that distinguishes your business and add uniqueness to your brand."
-            data-bs-placement="bottom"
-            ><img
-              src="http://www.alfredorafael.com/wp-content/uploads/2019/02/whiteLogoName2.png"
-          /></span>
-          <div
-            class="desktop"
-            type="Navigation bar"
-            data-bs-toggle="popover"
-            data-bs-title="This is the 'Navigation Bar'"
-            data-bs-content="Also known as 'main menu', it allows users to navigate your site via links. There are also 'side' and 'bottom' variations of these. The first 3 items are usually the most important."
-            data-bs-placement="bottom"
-            style="width: 100%; text-align: center; color: #303438"
-          >
-            &nbsp; &nbsp; Click to learn
-          </div>
-
-          <span style="position: relative">
+          <img
+          src="http://www.alfredorafael.com/wp-content/uploads/2019/02/whiteLogoName2.png" style="max-width: 5em;"
+          />
+          <div class="popover-container" style="width: 100%; display: flex; justify-content: center; position: relative">
+            <div class="popover-trigger" style="position: absolute"><div>hello</div></div>
+            <div class="popover-content">
+              <div class="popover-header">
+                This is called a 'Navigation Bar'
+                <span class="popover-exit-btn"><i class="bi bi-x-circle-fill"></i></span>
+                 
+              </div>
+              <div class="popover-body">
+                Also known as 'main menu', it allows users to navigate your site via links. There are also 'side' and 'bottom' variations of these. The first 3 items are usually the most important.
+                <div class="popover-buttons-container">
+                  <button class="next popover-button">Next</button>
+                  <button class="previous popover-button" style="display: none">Previous</button>
+                </div>
+              </div>
+            </div>
+        </div>
+          
             <button
               class="navbar-toggler"
               type="button"
@@ -60,28 +59,9 @@
             >
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div
-              class="mobile hamburger-description-trigger"
-              tabindex="0"
-              data-bs-trigger="focus"
-              type="text"
-              data-bs-toggle="popover"
-              data-bs-title="This is a 'Hamburger' Menu"
-              data-bs-content="An industry standard for collapsed menus. Alternatives include  'Kebab' menu (3 dots) or a 'More' button."
-              data-bs-placement="bottom"
-              style="
-                text-align: center;
-                color: #303438;
-                position: absolute;
-                left: 0;
-                min-width: 100%;
-              "
-            >
-              Click to learn
-            </div>
-          </span>
-
+            
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
@@ -95,7 +75,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="faq.html">FAQ</a>
               </li>
-
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -135,6 +114,7 @@
             </ul>
           </div>
         </div>
+        
       </nav>
       <!-- Header-->
       <header class="py-5 hero-banner">
@@ -151,71 +131,100 @@
                   a reference for our future projects.
                 </p>
                 <div
-                  class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start hero-popover-trigger"
+                  class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start"
                 >
-                  <a
+                <div class="popover-container">
+                  <div class="popover-trigger"> <button
                     class="btn btn-primary btn-lg px-4 me-sm-3"
                     type="link"
                     class="btn btn-outline-light btn-lg px-4"
-                    href="#"
-                    data-bs-toggle="popover"
-                    data-bs-title="CTA"
-                    data-bs-content="<strong>This is called a CTA</strong>, which stands for 'Call to Action'. This button should lead your user to the next step into becoming your client."
-                    data-bs-placement="top"
-                    >Get Started</a
-                  >
+                   
+                    >Get Started</button>
+                  </div>
+                  <div class="popover-content">
+                    <div class="popover-header">CTA (Call to Action)<span class="popover-exit-btn"><i class="bi bi-x-circle-fill"></i></span>                    </div>
+                    <div class="popover-body">
+                      CTA stands for 'Call to Action'. This button should lead your user to the next step into becoming your client. CTAs can guide users to the next step or a specific section of your site. This one scrolls to 'Features' section.
+                      <div class="popover-buttons-container">
+                        <button class="previous popover-button">Previou</button>
+                        <button class="next popover-button">Next</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+                 
+                  
                   <a
                     type="link"
                     class="btn btn-outline-light btn-lg px-4"
                     href="#features"
-                    data-bs-toggle="popover"
-                    data-bs-title="Another CTA"
-                    data-bs-content="CTA's can guide users to the next step or a specific section of your site. This one scrolls to 'Features' section."
-                    data-bs-placement="bottom"
+                  
                     >Learn More</a
                   >
                 </div>
               </div>
             </div>
             <div
-              class="col col-4 d-none d-lg-block text-center"
+              class="col col-4 d-none d-lg-block"
               style="background-color: transparent; margin-left: 10em"
-              class=""
-              type="text"
-              tabindex="0"
-              data-bs-trigger="focus"
-              data-bs-toggle="popover"
-              data-bs-title="This picture is a 'Hero Banner'"
-              data-bs-content="Also known as the 'Header', this background could also be filled with a video, a slider with business-related images, etc. Beware is the first thing customers see!"
-              data-bs-placement="left"
             >
-              Click to learn
+            <div class="popover-container">
+              <div class="popover-trigger"></div>
+              <div class="popover-content">
+                <div class="popover-header">
+                  This is image is the hero banner
+                  <span class="popover-exit-btn"><i class="bi bi-x-circle-fill"></i></span>                </div>
+                <div class="popover-body">
+                  Also known as the 'Header', this background could also be filled with a video, a slider with business-related images, etc. Beware is the first thing customers see!
+                  <div class="popover-buttons-container">
+                    <button class="previous popover-button">Previous</button>
+                    <button class="next popover-button">Next</button>
+                  </div>
+                </div>
+              </div>
+            </div>
             </div>
           </div>
         </div>
       </header>
-
       <div class="container">
         <div class="popover-container">
-          <div class="popover-trigger">Click 1!</div>
+          <div class="popover-trigger"><span style="display: none">Trigger goes here</span></div>
           <div class="popover-content">
-            This is pop-over content 1. It appears when you click the trigger!
-            <button class="next">Next</button
-            ><button class="previous">Previous</button>
+            <div class="popover-header">
+              This is the popover
+              <span class="popover-exit-btn"><i class="bi bi-x-circle-fill"></i></span>            </div>
+            <div class="popover-body">
+              Together we'll build and/or refine your logo + develop a
+              color-palette that distinguishes your business and add uniqueness
+              to your brand. This is pop-over content 1. It appears when you
+              click the trigger!
+              <div class="popover-buttons-container">
+                <button class="previous popover-button">Previous</button>
+                <button class="next popover-button">Next</button>
+              </div>
+            </div>
           </div>
         </div>
-
         <div class="popover-container">
-          <button class="popover-trigger">Button 2</button>
+          <div class="popover-trigger"><span style="display: none">Trigger goes here</span></div>
           <div class="popover-content">
-            This is pop-over content 1. It appears when you click the trigger!
-            <button class="next">Next</button
-            ><button class="previous">Previous</button>
+            <div class="popover-header">
+              This is the popover 2
+              <span class="popover-exit-btn"><i class="bi bi-x-circle-fill"></i></span>            </div>
+            <div class="popover-body">
+              Together we'll build and/or refine your logo + develop a
+              color-palette that distinguishes your business and add uniqueness
+              to your brand. This is pop-over content 1. It appears when you
+              click the trigger!
+              <div class="popover-buttons-container">
+                <button class="previous popover-button">Previous</button>
+                <button class="next popover-button">Next</button>
+              </div>
+            </div>
           </div>
-        </div>
       </div>
       <!-- Features section-->
-
       <section class="py-5" id="features">
         <div class="container px-5 my-5">
           <div class="row gx-5">
@@ -290,17 +299,101 @@
         >
           <div
             class="carousel-item active fs-4 mb-4 fst-italic"
-            style="padding: 0 20%"
           >
-            "1 Working with Start Bootstrap templates has saved me tons of
-            development time when building new projects! Starting with a
-            Bootstrap template just makes things easier!"
+          <div class="py-5 bg-light">
+            <div class="container px-5 my-5">
+              <div class="row gx-5 justify-content-center">
+                <div class="col-lg-10 col-xl-7">
+                  <div class="text-center">
+                    <div class="fs-4 mb-4 fst-italic">
+                      "1 Working with Start Bootstrap templates has saved me
+                      tons of development time when building new projects!
+                      Starting with a Bootstrap template just makes things
+                      easier!"
+                    </div>
+                    <div
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        class="rounded-circle me-3"
+                        src="https://dummyimage.com/40x40/ced4da/6c757d"
+                        alt="..."
+                      />
+                      <div class="fw-bold">
+                        Tom Ato
+                        <span class="fw-bold text-primary mx-1">/</span>
+                        CEO, Pomodoro
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
           <div class="carousel-item">
-            <div src="..." class="d-block w-100" alt="...">Two</div>
+            <div class="py-5 bg-light">
+              <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                  <div class="col-lg-10 col-xl-7">
+                    <div class="text-center">
+                      <div class="fs-4 mb-4 fst-italic">
+                        "2 Working with Start Bootstrap templates has saved me
+                        tons of development time when building new projects!
+                        Starting with a Bootstrap template just makes things
+                        easier!"
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-center"
+                      >
+                        <img
+                          class="rounded-circle me-3"
+                          src="https://dummyimage.com/40x40/ced4da/6c757d"
+                          alt="..."
+                        />
+                        <div class="fw-bold">
+                          Tom Ato
+                          <span class="fw-bold text-primary mx-1">/</span>
+                          CEO, Pomodoro
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="carousel-item">
-            <div src="..." class="d-block w-100" alt="...">Three</div>
+            <div class="py-5 bg-light">
+              <div class="container px-5 my-5">
+                <div class="row gx-5 justify-content-center">
+                  <div class="col-lg-10 col-xl-7">
+                    <div class="text-center">
+                      <div class="fs-4 mb-4 fst-italic">
+                        "3 Working with Start Bootstrap templates has saved me
+                        tons of development time when building new projects!
+                        Starting with a Bootstrap template just makes things
+                        easier!"
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-center"
+                      >
+                        <img
+                          class="rounded-circle me-3"
+                          src="https://dummyimage.com/40x40/ced4da/6c757d"
+                          alt="..."
+                        />
+                        <div class="fw-bold">
+                          Tom Ato
+                          <span class="fw-bold text-primary mx-1">/</span>
+                          CEO, Pomodoro
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <button
@@ -321,35 +414,7 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
-      <!-- -->
-      <div class="py-5 bg-light">
-        <div class="container px-5 my-5">
-          <div class="row gx-5 justify-content-center">
-            <div class="col-lg-10 col-xl-7">
-              <div class="text-center">
-                <div class="fs-4 mb-4 fst-italic">
-                  "Working with Start Bootstrap templates has saved me tons of
-                  development time when building new projects! Starting with a
-                  Bootstrap template just makes things easier!"
-                </div>
-                <div class="d-flex align-items-center justify-content-center">
-                  <img
-                    class="rounded-circle me-3"
-                    src="https://dummyimage.com/40x40/ced4da/6c757d"
-                    alt="..."
-                  />
-                  <div class="fw-bold">
-                    Tom Ato
-                    <span class="fw-bold text-primary mx-1">/</span>
-                    CEO, Pomodoro
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </div>     
       <!-- Blog preview section-->
       <section class="py-5">
         <div class="container px-5 my-5">
@@ -367,20 +432,44 @@
           <div class="row gx-5">
             <div class="col-lg-4 mb-5">
               <div class="card h-100 shadow border-0">
-                <img
+                <div class="popover-container">
+                  <div class="popover-trigger">
+                    <img
                   class="card-img-top"
                   src="https://dummyimage.com/600x350/ced4da/6c757d"
                   alt="..."
                 />
-                <div class="card-body p-4">
-                  <div class="badge bg-primary bg-gradient rounded-pill mb-2">
-                    News
+                    </div>
+                  <div class="popover-content">
+                    <div class="popover-header">
+                      This is a Card
+                      <span class="popover-exit-btn"><i class="bi bi-x-circle-fill"></i></span>                    </div>
+                    <div class="popover-body">
+                      Together we'll build and/or refine your logo + develop a
+                      color-palette that distinguishes your business and add uniqueness
+                      to your brand. This is pop-over content 1. It appears when you
+                      click the trigger!
+                      <div class="popover-buttons-container">
+                        <button class="previous popover-button">Previous</button>
+                        <button class="next popover-button">Next</button>
+                      </div>
+                    </div>
                   </div>
-                  <a
-                    class="text-decoration-none link-dark stretched-link"
-                    href="#!"
-                    ><h5 class="card-title mb-3">Blog post title</h5></a
-                  >
+                </div>
+                
+                <div class="card-body p-4">
+                  
+                  <div>
+                    <div class="badge bg-primary bg-gradient rounded-pill mb-2">
+                      News
+                    </div>
+                    <br/>
+                  <span
+                class="text-decoration-none link-dark stretched-link"
+              >
+                <h5 class="card-title mb-3">Blog post title</h5>
+                </span></div>
+                  
                   <p class="card-text mb-0">
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
@@ -404,6 +493,9 @@
                   </div>
                 </div>
               </div>
+              
+              
+              
             </div>
             <div class="col-lg-4 mb-5">
               <div class="card h-100 shadow border-0">
@@ -419,8 +511,9 @@
                   <a
                     class="text-decoration-none link-dark stretched-link"
                     href="#!"
-                    ><h5 class="card-title mb-3">Another blog post title</h5></a
                   >
+                    <h5 class="card-title mb-3">Another blog post title</h5>
+                  </a>
                   <p class="card-text mb-0">
                     This text is a bit longer to illustrate the adaptive height
                     of each card. Some quick example text to build on the card
@@ -460,11 +553,12 @@
                   <a
                     class="text-decoration-none link-dark stretched-link"
                     href="#!"
-                    ><h5 class="card-title mb-3">
+                  >
+                    <h5 class="card-title mb-3">
                       The last blog post title is a little bit longer than the
                       others
-                    </h5></a
-                  >
+                    </h5>
+                  </a>
                   <p class="card-text mb-0">
                     Some more quick example text to build on the card title and
                     make up the bulk of the card's content.
@@ -529,38 +623,7 @@
         </div>
       </section>
     </main>
-    <button
-      type="button"
-      class="btn btn-lg btn-danger popover-trigger"
-      data-bs-content="<strong>Important</strong> content here <button class='btn btn-primary btn-sm inside-popover'>Click me</button>"
-    >
-      Popover 1
-    </button>
-    <button
-      type="button"
-      class="btn btn-lg btn-success popover-trigger"
-      data-bs-content="<strong>Notice:</strong> More content here <button class='btn btn-secondary btn-sm inside-popover'>Another Button</button>"
-    >
-      Popover 2
-    </button>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var popoverTriggers = document.querySelectorAll(".popover-trigger");
-        popoverTriggers.forEach(function (trigger) {
-          var popover = new bootstrap.Popover(trigger, {
-            html: true,
-          });
-        });
-
-        document.body.addEventListener("click", function (e) {
-          if (e.target.classList.contains("inside-popover")) {
-            alert("Button inside popover clicked!");
-          }
-        });
-      });
-    </script>
     <!-- Footer-->
     <footer class="bg-dark py-4 mt-auto">
       <div class="container px-5">
@@ -569,7 +632,7 @@
         >
           <div class="col-auto">
             <div class="small m-0 text-white">
-              Copyright &copy; Your Website 2023
+              Copyright &copy; Your Website 2024
             </div>
           </div>
           <div class="col-auto">
@@ -588,3 +651,6 @@
     <script src="js/scripts.js"></script>
   </body>
 </html>
+
+
+<!-- Together we'll build and/or refine your logo + develop a color-palette that distinguishes your business and add uniqueness to your brand. -->

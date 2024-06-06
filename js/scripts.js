@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
   popoverContainers.forEach((container, index) => {
     var trigger = container.querySelector(".popover-trigger");
     trigger.addEventListener("click", function (event) {
-      hideAllPopovers(); // Hide all first, in case one is already open
+      hideAllPopovers();
       popoverContents[index].style.display = "block";
-      event.stopPropagation(); // Prevent the document click handler from firing
+      event.stopPropagation();
     });
   });
 
@@ -37,8 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
       if (nextPopover) {
         currentPopover.style.display = "none";
         nextPopover.style.display = "block";
+        if (!isElementInViewport(nextPopover)) {
+          nextPopover.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
       }
-      event.stopPropagation(); // Prevent the document click handler from firing
+      event.stopPropagation();
     });
   });
 
@@ -50,8 +53,14 @@ document.addEventListener("DOMContentLoaded", function () {
       if (previousPopover) {
         currentPopover.style.display = "none";
         previousPopover.style.display = "block";
+        if (!isElementInViewport(previousPopover)) {
+          previousPopover.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+          });
+        }
       }
-      event.stopPropagation(); // Prevent the document click handler from firing
+      event.stopPropagation();
     });
   });
 
@@ -62,22 +71,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Automatically display the first popover on load
   if (popoverContents.length > 0) {
-    popoverContents[0].style.display = "block"; // Display the first popover
+    popoverContents[0].style.display = "block";
   }
 });
 
-// prev
-const popoverTriggerList = document.querySelectorAll(
-  '[data-bs-toggle="popover"]'
-);
-const popoverList = [...popoverTriggerList].map(
-  (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
-);
+// Helper function to check if an element is in the viewport
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
-const popover = new bootstrap.Popover(".popover-dismiss", {
-  trigger: "focus",
-});
-
+// CAROUSEL
 const myCarouselElement = document.querySelector("#myCarousel");
 
 const carousel = new bootstrap.Carousel(myCarouselElement, {

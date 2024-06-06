@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
   popoverContainers.forEach((container, index) => {
     var trigger = container.querySelector(".popover-trigger");
     trigger.addEventListener("click", function (event) {
-      hideAllPopovers();
+      hideAllPopovers(); // Hide all first, in case one is already open
       popoverContents[index].style.display = "block";
-      event.stopPropagation();
+      event.stopPropagation(); // Prevent the document click handler from firing
     });
   });
 
@@ -37,11 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
       if (nextPopover) {
         currentPopover.style.display = "none";
         nextPopover.style.display = "block";
+        // Scroll the next popover into view if it is not fully visible
         if (!isElementInViewport(nextPopover)) {
           nextPopover.scrollIntoView({ behavior: "smooth", block: "nearest" });
         }
       }
-      event.stopPropagation();
+      event.stopPropagation(); // Prevent the document click handler from firing
     });
   });
 
@@ -53,14 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (previousPopover) {
         currentPopover.style.display = "none";
         previousPopover.style.display = "block";
-        if (!isElementInViewport(previousPopover)) {
-          previousPopover.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest",
-          });
-        }
       }
-      event.stopPropagation();
+      event.stopPropagation(); // Prevent the document click handler from firing
     });
   });
 
@@ -70,8 +65,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Automatically display the first popover on load
-  if (popoverContents.length > 0) {
-    popoverContents[0].style.display = "block";
+  // if (popoverContents.length > 0) {
+  //   popoverContents[0].style.display = "block"; // Display the first popover
+  // }
+
+  function startTourFunction() {
+    try {
+      hideAllPopovers(); // Ensure all other popovers are hidden
+      popoverContents[0].style.display = "block";
+      console.log("Tour started: First popover displayed.");
+    } catch (error) {
+      console.error("Failed to start tour:", error);
+    }
+  }
+
+  var startButton = document.getElementById("startTourButton");
+  if (startButton) {
+    startButton.addEventListener("click", function (event) {
+      startTourFunction();
+      event.stopPropagation(); // Prevent the document click handler from firing
+      console.log("Start tour button clicked.");
+    });
   }
 });
 

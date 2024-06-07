@@ -10896,7 +10896,7 @@ html {
 
 @media only screen and (max-width: 990px) {
   .hide-on-mobile {
-    display: none !important
+    display: none !important;
   }
   .show-on-mobile {
     display: block !important;
@@ -10908,6 +10908,7 @@ html {
 .popover-container {
   position: relative;
   display: inline-block;
+  transition: opacity 0.5s ease;
 }
 
 .popover-header {

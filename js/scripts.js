@@ -54,6 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
       if (previousPopover) {
         currentPopover.style.display = "none";
         previousPopover.style.display = "block";
+        // Scroll the previous popover into view if it is not fully visible
+        if (!isElementInViewport(previousPopover)) {
+          previousPopover.scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+          });
+        }
       }
       event.stopPropagation(); // Prevent the document click handler from firing
     });

@@ -116,17 +116,40 @@
          <!-- Header-->
          <header class="py-5 hero-banner">
             <div class="container px-5">
-               <div class="row gx-5 align-items-center justify-content-center">
+               <div class="row gx-5 align-items-center justify-content-center" style="position: relative">
                   <div class="col-lg-8 col-xl-7 col-xxl-6">
-                     <div class="my-5 text-center text-xl-start">
+                     <div class="my-5 text-center text-xl-start" >
                         <h1 class="display-5 fw-bolder text-white mb-2">
                            A Basic Modern Business Typical Website
                         </h1>
+                        <div style="display: flex;">
                         <p class="lead fw-normal text-white-50 mb-4">
                            Click each element on this section to learn how these are
                            called in the web development landscape, and lets use this as
                            a reference for our future projects.
                         </p>
+                        
+                        <div class="popover-container" style="position: absolute; top: 50%;
+                        right: 20%;
+                        margin: auto;
+                        transform: translateY(-50%);">
+                          <div class="popover-trigger" style="color: white; display: none">trigger point here</div>
+                          <div class="popover-content">
+                             <div class="popover-header">
+                                This is image is the hero banner
+                                <span class="popover-exit-btn"><i class="bi bi-x-circle-fill" style="color:#212529"></i></span>                
+                             </div>
+                             <div class="popover-body">
+                                Also known as the 'Header', this background could also be filled with a video, a slider with business-related images, etc. Beware is the first thing customers see!
+                                <div class="popover-buttons-container">
+                                   <button class="previous popover-button">Previous</button>
+                                   <button class="next popover-button">Next</button>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                      </div>
+                     
                         <div
                            class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start"
                            >
@@ -162,22 +185,7 @@
                      class="col col-4 d-none d-lg-block"
                      style="background-color: transparent; margin-left: 10em"
                      >
-                     <div class="popover-container">
-                        <div class="popover-trigger"></div>
-                        <div class="popover-content">
-                           <div class="popover-header">
-                              This is image is the hero banner
-                              <span class="popover-exit-btn"><i class="bi bi-x-circle-fill" style="color:#212529"></i></span>                
-                           </div>
-                           <div class="popover-body">
-                              Also known as the 'Header', this background could also be filled with a video, a slider with business-related images, etc. Beware is the first thing customers see!
-                              <div class="popover-buttons-container">
-                                 <button class="previous popover-button">Previous</button>
-                                 <button class="next popover-button">Next</button>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                     
                   </div>
                </div>
             </div>
